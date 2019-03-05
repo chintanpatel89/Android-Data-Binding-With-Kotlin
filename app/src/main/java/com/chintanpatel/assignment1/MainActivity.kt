@@ -47,6 +47,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // load all data
+
     fun initData()
     {
         vList.add(GeneralMotors("Camero", 2018, 750, false, 78000.00))
