@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data>
+        <variable
+                name="vehicles"
+                type="com.chintanpatel.assignment1.GeneralMotors" />
+        <import type="java.lang.String" />
+    </data>
+
+    <LinearLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                 android:layout_marginEnd="16dp"
+                 android:layout_marginStart="16dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{vehicles.modelName}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <FrameLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="8dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@{'$' + String.valueOf(vehicles.price)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:text="@{String.valueOf(vehicles.releaseYear)}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>
